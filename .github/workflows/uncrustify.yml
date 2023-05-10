@@ -36,7 +36,7 @@ jobs:
         run: |
           echo ${{ steps.upstreamrepo.outputs.RemoteRepo }}:${{ steps.upstreambranch.outputs.branchname }}
       - name: Checkout upstream repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
            token: ${{ secrets.PAT }}
            repository: ${{ steps.upstreamrepo.outputs.RemoteRepo }}
